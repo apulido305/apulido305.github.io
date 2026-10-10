@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-fixed": "#e9ddff", "outline-variant": "#cbc4d2", "secondary-container": "#e1d4fd", "surface-container-low": "#f8f2fa", "on-surface-variant": "#494551", "surface-container-lowest": "#ffffff", "surface-container-highest": "#e6e0e9", "on-secondary-fixed-variant": "#4b4263", "secondary-fixed-dim": "#cdc0e9", "surface-container": "#f2ecf4", "on-error-container": "#93000a", "tertiary-container": "#c9a74d", "on-tertiary": "#ffffff", "tertiary-fixed": "#ffdf93", "on-surface": "#1d1b20", "surface-variant": "#e6e0e9", "surface-bright": "#fdf7ff", "on-background": "#1d1b20", "surface-dim": "#ded8e0", "outline": "#7a7582", "error-container": "#ffdad6", "on-error": "#ffffff", "tertiary": "#765b00", "tertiary-fixed-dim": "#e7c365", "on-tertiary-container": "#503d00", "primary-fixed-dim": "#cfbcff", "primary": "#4f378a", "error": "#ba1a1a", "inverse-primary": "#cfbcff", "secondary": "#63597c", "on-primary": "#ffffff", "surface": "#fdf7ff", "primary-container": "#6750a4", "on-secondary-container": "#645a7d", "on-tertiary-fixed-variant": "#594400", "inverse-on-surface": "#f5eff7", "on-secondary-fixed": "#1f1635", "surface-container-high": "#ece6ee", "on-tertiary-fixed": "#241a00", "on-secondary": "#ffffff", "on-primary-container": "#e0d2ff", "inverse-surface": "#322f35", "on-primary-fixed": "#22005d", "secondary-fixed": "#e9ddff", "background": "#fdf7ff", "on-primary-fixed-variant": "#4f378a", "surface-tint": "#6750a4" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": {}, "fontFamily": { "headline": ["Public Sans"], "display": ["Public Sans"], "body": ["Public Sans"], "label": ["Public Sans"] }, "fontSize": {} } } }</script></head><body class="bg-surface font-body text-on-surface"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col pt-4 pb-6"><div class="px-6 mb-6 flex items-center justify-between"><div class="flex items-center gap-3"><div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container"><span class="material-symbols-outlined text-base">terminal</span></div><div class="flex flex-col"><span class="text-sm font-headline font-bold uppercase tracking-wider text-on-surface">mrpulido.com</span><span class="text-[10px] font-mono text-on-surface-variant">v2.4 // EDTECH_SHELL</span></div></div></div><nav class="flex-1 px-3 space-y-1 overflow-y-auto" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><div class="px-3 pb-2 text-[10px] font-mono uppercase tracking-widest text-on-surface-variant">Root Subsystems</div><a aria-current="page" class="flex items-center px-3 py-2 transition-all bg-primary-container text-on-primary-container font-semibold rounded-lg" data-path="all-apps" href="#"><span class="material-symbols-outlined mr-3 text-lg">grid_view</span>All Apps</a><a class="flex items-center px-3 py-2 text-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="terminal-tools" href="#"><span class="material-symbols-outlined mr-3 text-lg">code</span>Terminal Tools</a><a class="flex items-center px-3 py-2 text-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="cyber-labs" href="#"><span class="material-symbols-outlined mr-3 text-lg">security</span>Cyber Labs</a><a class="flex items-center px-3 py-2 text-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="game-engines" href="#"><span class="material-symbols-outlined mr-3 text-lg">sports_esports</span>Game Engines</a><a class="flex items-center px-3 py-2 text-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="coding-sandboxes" href="#"><span class="material-symbols-outlined mr-3 text-lg">data_object</span>Coding Sandboxes</a><div class="pt-4 px-3 pb-2 text-[10px] font-mono uppercase tracking-widest text-on-surface-variant">Class Infrastructure</div><a class="flex items-center px-3 py-2 text-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="student-portals" href="#"><span class="material-symbols-outlined mr-3 text-lg">school</span>Student Portals</a><a class="flex items-center px-3 py-2 text-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="playlists" href="#"><span class="material-symbols-outlined mr-3 text-lg">playlist_play</span>Playlists</a><a class="flex items-center px-3 py-2 text-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="discord-terminal" href="#"><span class="material-symbols-outlined mr-3 text-lg">forum</span>Discord / Class Terminal</a></nav><div class="px-4 pt-4 border-none"><div class="bg-surface-container p-3 rounded-lg flex items-center justify-between"><span class="text-[10px] font-mono text-on-surface-variant">SYS: ONLINE // 99.98%</span><div class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></div></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-6"><div class="flex items-center gap-4 flex-1 max-w-2xl"><div class="flex-1 flex items-center bg-surface-container-high rounded-lg px-3 py-1.5 focus-within:ring-2 focus-within:ring-primary"><span class="material-symbols-outlined text-on-surface-variant mr-2 text-sm">search</span><input class="w-full bg-transparent border-none outline-none text-xs font-mono text-on-surface placeholder-on-surface-variant" placeholder="grep app --filter=python..." type="text"/></div><nav class="hidden xl:flex items-center gap-2" data-active-classes="bg-primary text-on-primary font-medium"><a class="text-xs font-mono px-2.5 py-1 rounded bg-surface-container-low text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface transition-all" data-path="ctf-challenges" href="#">CTF Challenges</a><a class="text-xs font-mono px-2.5 py-1 rounded bg-surface-container-low text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface transition-all" data-path="python-labs" href="#">Python Labs</a><a class="text-xs font-mono px-2.5 py-1 rounded bg-surface-container-low text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface transition-all" data-path="web-security" href="#">Web Security</a><a class="text-xs font-mono px-2.5 py-1 rounded bg-surface-container-low text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface transition-all" data-path="game-dev" href="#">Game Dev</a><a class="text-xs font-mono px-2.5 py-1 rounded bg-surface-container-low text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface transition-all" data-path="ap-cs-tools" href="#">AP CS Tools</a></nav></div><div class="flex items-center gap-4"><button aria-label="Notifications" class="relative p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-tertiary-container"></span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArvHgdcAg3e3JN-1iEFkLxb8OcS2YenwYNUz3TNAopUvCuJo3lGtHcMJZD1u7JsFLb3dD_0LJGYuwG17EeTkQr3yJPfgtX9hib7-PyJz9gUU24vloiirsmmpKxUKBScSOoa_zvcnJX_iA9mJFowC1Dsli18Z8iESbk8u6gHa4a5tRFVoAEVUkJo7_Q4dLctAXAvwr7wj50eFMcSGp2fCDAlQuTz4qiPo40v8VC6oLD3KtBEaB9BJ30Jw"/></div></header><main class="w-full pt-16 bg-surface px-8"><div class="flex flex-col w-full pb-16">
+<!-- Hero Terminal Matrix Banner -->
+<div class="relative overflow-hidden rounded-xl bg-inverse-surface text-inverse-on-surface shadow-2xl p-6 sm:p-8 mb-8 mt-2">
+<div class="absolute -right-20 -top-20 w-96 h-96 bg-primary/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute right-1/3 -bottom-20 w-72 h-72 bg-tertiary-container/15 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+<div class="space-y-3 max-w-2xl">
+<div class="flex items-center gap-2 font-mono text-xs tracking-widest text-primary-fixed">
+<span class="inline-block w-2 h-2 rounded-full bg-tertiary-container animate-ping"></span>
+<span>NET://GATEWAY_INITIALIZED</span>
+<span class="text-outline">/</span>
+<span class="text-tertiary-fixed">SYS_VER_3.04</span>
+</div>
+<h1 class="text-2xl sm:text-4xl font-headline font-black tracking-tight text-surface-bright uppercase">
+          PULIDO_CORE <span class="text-primary-fixed font-mono">//</span> <span class="bg-gradient-to-r from-primary-fixed-dim via-surface-bright to-tertiary-fixed bg-clip-text text-transparent">APP_HUB</span>
+</h1>
+<p class="text-sm text-outline-variant font-mono leading-relaxed">
+          Central terminal for CS sandboxes, offensive security rigs, and algorithmic proving grounds. Run scripts directly in-browser with synced runtime evaluation.
+        </p>
+<!-- Live Telemetry Badges -->
+<div class="flex flex-wrap items-center gap-2 pt-1 font-mono text-xs">
+<div class="flex items-center gap-2 bg-surface-container-high/20 px-3 py-1.5 rounded-lg text-inverse-on-surface backdrop-blur-sm">
+<span class="material-symbols-outlined text-sm text-primary-fixed">dns</span>
+<span class="text-surface-dim">DEPLOYED:</span>
+<span class="font-bold text-surface-bright">42 Apps</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-high/20 px-3 py-1.5 rounded-lg text-inverse-on-surface backdrop-blur-sm">
+<span class="material-symbols-outlined text-sm text-tertiary-fixed">groups</span>
+<span class="text-surface-dim">LIVE NODES:</span>
+<span class="font-bold text-surface-bright">1.2k Students</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-high/20 px-3 py-1.5 rounded-lg text-inverse-on-surface backdrop-blur-sm">
+<span class="material-symbols-outlined text-sm text-error">flag</span>
+<span class="text-surface-dim">CTF:</span>
+<span class="font-bold text-tertiary-fixed">Season 4 Active</span>
+</div>
+</div>
+</div>
+<!-- Live Stream Mini HUD / Session Key -->
+<div class="flex flex-col sm:flex-row lg:flex-col gap-3 min-w-[240px] font-mono text-xs">
+<div class="bg-surface-container-lowest/5 p-4 rounded-xl shadow-inner backdrop-blur-md">
+<div class="flex justify-between items-center text-outline-variant mb-2">
+<span>SOCKET_LATENCY</span>
+<span class="text-tertiary-fixed font-bold">14ms</span>
+</div>
+<div class="w-full bg-surface-container-high/30 h-1.5 rounded-full overflow-hidden">
+<div class="bg-tertiary-container h-full rounded-full" style="width: 82%"></div>
+</div>
+<div class="mt-3 flex items-center justify-between text-[11px] text-surface-dim">
+<span>ENCRYPTION</span>
+<span class="text-primary-fixed">TLS 1.3 / ED25519</span>
+</div>
+</div>
+<div class="flex items-center gap-2 text-[11px] text-outline-variant bg-surface-container-high/10 px-3 py-2 rounded-lg">
+<span class="material-symbols-outlined text-xs text-primary-fixed">terminal</span>
+<span>ROOT@mrpulido.com:~# ./grant_perm</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Filter Pills (YouTube-Style Hub Bar) -->
+<div class="sticky top-16 z-30 -mx-8 px-8 py-3 bg-surface/90 backdrop-blur-md mb-6">
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar scroll-smooth">
+<button class="pill-btn active whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-mono font-semibold transition-all bg-primary text-on-primary shadow-sm hover:opacity-90">
+        All Subsystems
+      </button>
+<button class="pill-btn whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-mono font-medium transition-all bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface">
+        Cybersecurity
+      </button>
+<button class="pill-btn whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-mono font-medium transition-all bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface">
+        Python Labs
+      </button>
+<button class="pill-btn whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-mono font-medium transition-all bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface">
+        Web Dev Rigs
+      </button>
+<button class="pill-btn whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-mono font-medium transition-all bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface">
+        Game Dev / Canvas
+      </button>
+<button class="pill-btn whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-mono font-medium transition-all bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface">
+        AI & Neural Nets
+      </button>
+<button class="pill-btn whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-mono font-medium transition-all bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface">
+        Linux Daemons
+      </button>
+<button class="pill-btn whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-mono font-medium transition-all bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface">
+        AP Computer Science
+      </button>
+</div>
+</div>
+<!-- Primary Content Layout: App Card Grid + Integrated Sidebar Widget -->
+<div class="grid grid-cols-1 xl:grid-cols-4 gap-8">
+<!-- Video/App Stream Grid (3 Columns on Desktop) -->
+<div class="xl:col-span-3 grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-6">
+<!-- Tile 1: Bash Odyssey -->
+<div class="group relative flex flex-col bg-surface-container-lowest rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
+<div class="relative aspect-video w-full overflow-hidden bg-inverse-surface">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80" data-alt="Dark cyberpunk console workspace with glowing green terminal text and neon purple city skyline seen through glass reflection, high-tech hacker interface aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmsjPPhqTuMvEpXs8DJuoakMTwh9fwLkdyEcsPtA6IB6nj_zlnWUEzMlW6sntmOpbSWeQGNPGYb7h8njqSbpBLUX3cRXbpSFmQuwqDP2wcSq75S05FUVYgcuv_6oZhKK_BQpLTb43Fz3Td7xw0rhC7hEu6sYWBr1YkYZVCa6yT-MeF0sS2YFEZ8pkNw8GSuBv9gEtJToyvYwZeG0MzAD3a2BEr2-bBF6lZK81BKQVSzfLVeyP46cu-Sg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface via-inverse-surface/30 to-transparent"></div>
+<span class="absolute top-2.5 left-2.5 bg-primary/90 backdrop-blur-md text-on-primary font-mono text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded">
+            LEVEL: NOVICE
+          </span>
+<span class="absolute bottom-2.5 right-2.5 bg-inverse-surface/90 text-inverse-on-surface font-mono text-[11px] font-bold px-2 py-0.5 rounded shadow">
+            15 MIN LAB
+          </span>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-inverse-surface/60 backdrop-blur-xs gap-2">
+<button class="px-3 py-1.5 rounded bg-primary text-on-primary text-xs font-mono font-medium shadow hover:bg-primary/90 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">terminal</span> Launch
+            </button>
+<button class="px-2.5 py-1.5 rounded bg-surface-container-highest text-on-surface text-xs font-mono shadow hover:bg-surface-container flex items-center">
+<span class="material-symbols-outlined text-sm">call_split</span>
+</button>
+</div>
+</div>
+<div class="p-4 flex gap-3">
+<div class="w-9 h-9 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-lg">terminal</span>
+</div>
+<div class="min-w-0 flex-1">
+<h3 class="font-headline font-bold text-sm text-on-surface truncate group-hover:text-primary transition-colors">
+              Terminal 01: Bash Odyssey
+            </h3>
+<div class="flex items-center gap-1 text-xs text-on-surface-variant mt-0.5">
+<span class="truncate">Mr. Pulido · CS Dept</span>
+<span class="material-symbols-outlined text-xs text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="flex items-center gap-2 text-[11px] font-mono text-outline mt-1.5">
+<span>18.4k runs</span>
+<span>•</span>
+<span>updated 2h ago</span>
+</div>
+<div class="flex items-center gap-1.5 mt-3">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-mono text-[10px]">AP CS A</span>
+<span class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-mono text-[10px]">Interactive</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Tile 2: SQL Injection Defense Lab -->
+<div class="group relative flex flex-col bg-surface-container-lowest rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
+<div class="relative aspect-video w-full overflow-hidden bg-inverse-surface">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80" data-alt="Hacker computer monitor displaying stylized cyber intrusion query strings, deep violet ambient glow and neon orange warning indicators" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAS-AYW6DyY1o7Dye1MqIiOVl12yLa1NLx2lpzot3f0SUBuvAJylHNeRymGx6TDhxQIWk8UCdPXkJFRtBj5HMEHzxeF-A5gTLDz7X9rweKrrv32olcG9Up4ls9jeDfaRmajlmjUp39KighwiRtKLnfTbagXDxImZo6XSILOJmZyFemZ1sEw6mGarLnWOf8Bss3SQ3MUKf8IneOsy5LyVxTlpTdQ_VBIefIhj7ZQ93-TISZbeNZwYvOYA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface via-inverse-surface/30 to-transparent"></div>
+<span class="absolute top-2.5 left-2.5 bg-error text-on-error font-mono text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-surface-bright animate-ping"></span> LIVE DEFENSE
+          </span>
+<span class="absolute bottom-2.5 right-2.5 bg-inverse-surface/90 text-inverse-on-surface font-mono text-[11px] font-bold px-2 py-0.5 rounded shadow">
+            30 MIN LAB
+          </span>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-inverse-surface/60 backdrop-blur-xs gap-2">
+<button class="px-3 py-1.5 rounded bg-primary text-on-primary text-xs font-mono font-medium shadow hover:bg-primary/90 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">terminal</span> Launch
+            </button>
+<button class="px-2.5 py-1.5 rounded bg-surface-container-highest text-on-surface text-xs font-mono shadow hover:bg-surface-container flex items-center">
+<span class="material-symbols-outlined text-sm">call_split</span>
+</button>
+</div>
+</div>
+<div class="p-4 flex gap-3">
+<div class="w-9 h-9 rounded-full bg-error-container text-on-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-lg">shield</span>
+</div>
+<div class="min-w-0 flex-1">
+<h3 class="font-headline font-bold text-sm text-on-surface truncate group-hover:text-primary transition-colors">
+              SQL Injection Defense Lab
+            </h3>
+<div class="flex items-center gap-1 text-xs text-on-surface-variant mt-0.5">
+<span class="truncate">Mr. Pulido · CS Dept</span>
+<span class="material-symbols-outlined text-xs text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="flex items-center gap-2 text-[11px] font-mono text-outline mt-1.5">
+<span>9.1k runs</span>
+<span>•</span>
+<span>updated yesterday</span>
+</div>
+<div class="flex items-center gap-1.5 mt-3">
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-mono text-[10px]">Security CTF</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-mono text-[10px]">Graded</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Tile 3: PixelEngine 2D -->
+<div class="group relative flex flex-col bg-surface-container-lowest rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
+<div class="relative aspect-video w-full overflow-hidden bg-inverse-surface">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80" data-alt="Retro 16-bit arcade video game engine editor inside dark glass room, colorful isometric pixels and grid blueprints on screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEDEAo46CtdcNyp2rFbawXQ8VZULAwdSjAKvDb4IsuV28mJVXGUTZiJF6LwpsvrHMGeZdQN9sl7f9ZGX4_fA7rug7Fv6-IO1-erRZRXqZjv86OZ7gBFyRz5-L33H0r3E2LB_xTP_6LUGkXHZwttf0EnUF_pTVkgVwUT9GUXImt3fVScttXrHy4qc6qYMXZuBHQjjSinCcVq3CZNKqTgutNtdjTK8rKkrfhmn-7itnB4Fhz_FwKdEXXTg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface via-inverse-surface/30 to-transparent"></div>
+<span class="absolute top-2.5 left-2.5 bg-tertiary-container text-on-tertiary-container font-mono text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded">
+            SANDBOX ENGINE
+          </span>
+<span class="absolute bottom-2.5 right-2.5 bg-inverse-surface/90 text-inverse-on-surface font-mono text-[11px] font-bold px-2 py-0.5 rounded shadow">
+            UNLIMITED
+          </span>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-inverse-surface/60 backdrop-blur-xs gap-2">
+<button class="px-3 py-1.5 rounded bg-primary text-on-primary text-xs font-mono font-medium shadow hover:bg-primary/90 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">terminal</span> Launch
+            </button>
+<button class="px-2.5 py-1.5 rounded bg-surface-container-highest text-on-surface text-xs font-mono shadow hover:bg-surface-container flex items-center">
+<span class="material-symbols-outlined text-sm">call_split</span>
+</button>
+</div>
+</div>
+<div class="p-4 flex gap-3">
+<div class="w-9 h-9 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-lg">sports_esports</span>
+</div>
+<div class="min-w-0 flex-1">
+<h3 class="font-headline font-bold text-sm text-on-surface truncate group-hover:text-primary transition-colors">
+              PixelEngine 2D - Canvas Studio
+            </h3>
+<div class="flex items-center gap-1 text-xs text-on-surface-variant mt-0.5">
+<span class="truncate">Mr. Pulido · CS Dept</span>
+<span class="material-symbols-outlined text-xs text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="flex items-center gap-2 text-[11px] font-mono text-outline mt-1.5">
+<span>23.8k runs</span>
+<span>•</span>
+<span>updated 4d ago</span>
+</div>
+<div class="flex items-center gap-1.5 mt-3">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-mono text-[10px]">Game Dev</span>
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-mono text-[10px]">JavaScript</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Tile 4: Matrix Memory Visualizer -->
+<div class="group relative flex flex-col bg-surface-container-lowest rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
+<div class="relative aspect-video w-full overflow-hidden bg-inverse-surface">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80" data-alt="Glowing green three-dimensional matrix memory stack visualization, memory addresses and pointers floating in cyberspace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAulGvuy7OAD8SKiE_3ePmNAaIcEXw89ihIz4NpuTcELi4EIj7jLNIH6AK4H0MHf7ZNL6QIKxWn451iw65eKv_rauuR9z1c8SwDVR0o8QBkVvnhxF6at_0pvYO0SAZIHN_wLl3GhDywcfQdyzIvvRT1LhlDXskHpHENsgr3GwvuRSCfGKAMQKk7lhukV6na1j7bcYDXUdu3WRyaX_i88zRkh3AoexCiwjRr9mK_ZKI2tWKo3QLSpQy7PA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface via-inverse-surface/30 to-transparent"></div>
+<span class="absolute top-2.5 left-2.5 bg-primary-container text-on-primary-container font-mono text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded">
+            LEVEL: INTERMEDIATE
+          </span>
+<span class="absolute bottom-2.5 right-2.5 bg-inverse-surface/90 text-inverse-on-surface font-mono text-[11px] font-bold px-2 py-0.5 rounded shadow">
+            20 MIN LAB
+          </span>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-inverse-surface/60 backdrop-blur-xs gap-2">
+<button class="px-3 py-1.5 rounded bg-primary text-on-primary text-xs font-mono font-medium shadow hover:bg-primary/90 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">terminal</span> Launch
+            </button>
+<button class="px-2.5 py-1.5 rounded bg-surface-container-highest text-on-surface text-xs font-mono shadow hover:bg-surface-container flex items-center">
+<span class="material-symbols-outlined text-sm">call_split</span>
+</button>
+</div>
+</div>
+<div class="p-4 flex gap-3">
+<div class="w-9 h-9 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-lg">memory</span>
+</div>
+<div class="min-w-0 flex-1">
+<h3 class="font-headline font-bold text-sm text-on-surface truncate group-hover:text-primary transition-colors">
+              Matrix Memory Visualizer
+            </h3>
+<div class="flex items-center gap-1 text-xs text-on-surface-variant mt-0.5">
+<span class="truncate">Mr. Pulido · CS Dept</span>
+<span class="material-symbols-outlined text-xs text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="flex items-center gap-2 text-[11px] font-mono text-outline mt-1.5">
+<span>11.3k runs</span>
+<span>•</span>
+<span>updated 1w ago</span>
+</div>
+<div class="flex items-center gap-1.5 mt-3">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-mono text-[10px]">AP CS A</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-mono text-[10px]">Pointers</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Tile 5: NeuralNet Toy Simulator -->
+<div class="group relative flex flex-col bg-surface-container-lowest rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
+<div class="relative aspect-video w-full overflow-hidden bg-inverse-surface">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80" data-alt="Futuristic artificial neural network graph illuminated with neon nodes and synaptic data beams in dark violet server room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsRGoIsibb6bqTMC8sxeTc4fMe5pagj7wY3vBIBErHSucFL4cRrSVAS_6Cq8bvoVmNaBFKdA14a5YWcayhNGe7hi-Ce44f-MxnIer6oSqv4HYVVUbaGkpGvk6m4YlzbLh67By0wulMsrgxRyX8yhU3-9KjGosFRBF1S_2Y4K9TNEmq_PY89l3NNwZ6EWpiODxuCfKZ8Mu12u2RtGrEhy4eyHlIk3uSUlluylODoxi_SorQ9Jp8a8VTww"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface via-inverse-surface/30 to-transparent"></div>
+<span class="absolute top-2.5 left-2.5 bg-secondary text-on-secondary font-mono text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded">
+            LEVEL: ADVANCED
+          </span>
+<span class="absolute bottom-2.5 right-2.5 bg-inverse-surface/90 text-inverse-on-surface font-mono text-[11px] font-bold px-2 py-0.5 rounded shadow">
+            45 MIN LAB
+          </span>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-inverse-surface/60 backdrop-blur-xs gap-2">
+<button class="px-3 py-1.5 rounded bg-primary text-on-primary text-xs font-mono font-medium shadow hover:bg-primary/90 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">terminal</span> Launch
+            </button>
+<button class="px-2.5 py-1.5 rounded bg-surface-container-highest text-on-surface text-xs font-mono shadow hover:bg-surface-container flex items-center">
+<span class="material-symbols-outlined text-sm">call_split</span>
+</button>
+</div>
+</div>
+<div class="p-4 flex gap-3">
+<div class="w-9 h-9 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-lg">psychology</span>
+</div>
+<div class="min-w-0 flex-1">
+<h3 class="font-headline font-bold text-sm text-on-surface truncate group-hover:text-primary transition-colors">
+              NeuralNet Toy Simulator
+            </h3>
+<div class="flex items-center gap-1 text-xs text-on-surface-variant mt-0.5">
+<span class="truncate">Mr. Pulido · CS Dept</span>
+<span class="material-symbols-outlined text-xs text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="flex items-center gap-2 text-[11px] font-mono text-outline mt-1.5">
+<span>7.9k runs</span>
+<span>•</span>
+<span>updated 3d ago</span>
+</div>
+<div class="flex items-center gap-1.5 mt-3">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-mono text-[10px]">AI / ML</span>
+<span class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-mono text-[10px]">Python</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Tile 6: Binary Exploit Sandbox -->
+<div class="group relative flex flex-col bg-surface-container-lowest rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
+<div class="relative aspect-video w-full overflow-hidden bg-inverse-surface">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80" data-alt="Assembly language disassembler output on a cyberpunk dark glass screen with purple highlights and buffer overflow payload diagrams" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLLCUbxTjGotIPfbOT1dXcEm6gUPTcB4xyo9VYGUHSBAbH9gOR677RKd5aEb4Vim25kjEe6EEUwuCGYKyxSCgpo4dp63SMpio4flqm6ckj6XgtfnZ1I-ozA2ptVQ5kaeYBAbH_etaIoj933vLY-el4w8-g2c3djI5n-HFvngVVbTlQPpypLVBQe9Mbp63uHoLvRO2yAIvL-9WmqYUx88jabBv6vnnqPQKpHLKEJ8Ro5FK0wNe12kPizw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface via-inverse-surface/30 to-transparent"></div>
+<span class="absolute top-2.5 left-2.5 bg-error text-on-error font-mono text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded">
+            LEVEL: ELITE
+          </span>
+<span class="absolute bottom-2.5 right-2.5 bg-inverse-surface/90 text-inverse-on-surface font-mono text-[11px] font-bold px-2 py-0.5 rounded shadow">
+            60 MIN LAB
+          </span>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-inverse-surface/60 backdrop-blur-xs gap-2">
+<button class="px-3 py-1.5 rounded bg-primary text-on-primary text-xs font-mono font-medium shadow hover:bg-primary/90 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">terminal</span> Launch
+            </button>
+<button class="px-2.5 py-1.5 rounded bg-surface-container-highest text-on-surface text-xs font-mono shadow hover:bg-surface-container flex items-center">
+<span class="material-symbols-outlined text-sm">call_split</span>
+</button>
+</div>
+</div>
+<div class="p-4 flex gap-3">
+<div class="w-9 h-9 rounded-full bg-error-container text-on-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-lg">bug_report</span>
+</div>
+<div class="min-w-0 flex-1">
+<h3 class="font-headline font-bold text-sm text-on-surface truncate group-hover:text-primary transition-colors">
+              Binary Exploit Sandbox
+            </h3>
+<div class="flex items-center gap-1 text-xs text-on-surface-variant mt-0.5">
+<span class="truncate">Mr. Pulido · CS Dept</span>
+<span class="material-symbols-outlined text-xs text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="flex items-center gap-2 text-[11px] font-mono text-outline mt-1.5">
+<span>5.4k runs</span>
+<span>•</span>
+<span>updated 5h ago</span>
+</div>
+<div class="flex items-center gap-1.5 mt-3">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-mono text-[10px]">Cybersecurity</span>
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-mono text-[10px]">Buffer Overflow</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Side Tactical Panel: Terminal Console + Featured Student Bounty -->
+<div class="xl:col-span-1 space-y-6">
+<!-- Quick Command Terminal Widget -->
+<div class="bg-inverse-surface text-inverse-on-surface rounded-xl shadow-lg p-5 font-mono">
+<div class="flex items-center justify-between pb-3 text-xs text-outline-variant">
+<div class="flex items-center gap-2">
+<div class="w-2.5 h-2.5 rounded-full bg-error"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-tertiary-container"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-primary-fixed"></div>
+<span class="ml-1 text-[11px] font-bold text-surface-bright">QUICK_CLI</span>
+</div>
+<span class="text-[10px] text-tertiary-fixed">TTY: /dev/pts/4</span>
+</div>
+<div class="text-xs space-y-2 py-3 text-outline-variant max-h-48 overflow-y-auto no-scrollbar" id="cli-output">
+<p class="text-surface-dim">> Connected to mrpulido.com cluster.</p>
+<p class="text-surface-dim">> Type <span class="text-primary-fixed">help</span> or click command shortcuts below.</p>
+</div>
+<div class="space-y-1.5 pt-2">
+<div class="text-[10px] uppercase tracking-wider text-outline">Click to Execute:</div>
+<button class="w-full text-left bg-surface-container-high/10 hover:bg-surface-container-high/20 px-2.5 py-1.5 rounded text-[11px] text-primary-fixed flex items-center justify-between transition-colors" onclick="runCommand('pulido run ctf-keygen')">
+<span>$ pulido run ctf-keygen</span>
+<span class="material-symbols-outlined text-xs">play_arrow</span>
+</button>
+<button class="w-full text-left bg-surface-container-high/10 hover:bg-surface-container-high/20 px-2.5 py-1.5 rounded text-[11px] text-secondary-fixed flex items-center justify-between transition-colors" onclick="runCommand('git clone labs/ap-cs-mock')">
+<span>$ git clone labs/ap-cs-mock</span>
+<span class="material-symbols-outlined text-xs">play_arrow</span>
+</button>
+<button class="w-full text-left bg-surface-container-high/10 hover:bg-surface-container-high/20 px-2.5 py-1.5 rounded text-[11px] text-tertiary-fixed flex items-center justify-between transition-colors" onclick="runCommand('sysinfo --load --network')">
+<span>$ sysinfo --load</span>
+<span class="material-symbols-outlined text-xs">play_arrow</span>
+</button>
+</div>
+<div class="mt-4 pt-3 flex items-center gap-2 bg-surface-container-high/10 px-3 py-1.5 rounded text-xs text-surface-bright">
+<span class="text-primary-fixed font-bold">></span>
+<input class="bg-transparent border-none outline-none w-full text-surface-bright font-mono text-xs placeholder:text-outline" id="cli-input" onkeydown="if(event.key === 'Enter') handleInput(this)" placeholder="run command..." type="text"/>
+</div>
+</div>
+<!-- Featured Student Bounty Card -->
+<div class="bg-surface-container rounded-xl shadow-md p-5 space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary">military_tech</span>
+<span class="font-headline font-bold text-xs uppercase tracking-wider text-on-surface">Weekly CTF Bounty</span>
+</div>
+<span class="text-[10px] font-mono font-bold bg-tertiary-fixed text-on-tertiary-fixed px-2 py-0.5 rounded">
+            +500 XP
+          </span>
+</div>
+<div>
+<h4 class="font-headline font-bold text-sm text-on-surface">Challenge #04: XSS Payload Injector</h4>
+<p class="text-xs text-on-surface-variant mt-1 leading-relaxed">
+            Bypass HTML sanitization inside the guestbook container to trigger an alert box in the sandboxed frame.
+          </p>
+</div>
+<!-- Inline Submission Progress Chart -->
+<div class="bg-surface-container-lowest p-3 rounded-lg space-y-2">
+<div class="flex justify-between text-[11px] font-mono text-on-surface-variant">
+<span>Submissions Verified</span>
+<span class="font-bold text-primary">34 / 85 Solved</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all duration-500" style="width: 40%"></div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex -space-x-2">
+<div class="w-6 h-6 rounded-full bg-primary-container text-on-primary-container text-[10px] flex items-center justify-center font-bold">AK</div>
+<div class="w-6 h-6 rounded-full bg-secondary-container text-on-secondary-container text-[10px] flex items-center justify-center font-bold">MR</div>
+<div class="w-6 h-6 rounded-full bg-tertiary-container text-on-tertiary-container text-[10px] flex items-center justify-center font-bold">ZL</div>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-primary text-on-primary text-xs font-mono font-semibold hover:bg-primary/90 transition-colors shadow">
+            Accept Bounty
+          </button>
+</div>
+</div>
+<!-- Quick Teacher Announcements / Terminal MOTD -->
+<div class="bg-surface-container-low rounded-xl p-5 space-y-3">
+<div class="flex items-center gap-2 text-xs font-headline font-bold uppercase text-on-surface-variant">
+<span class="material-symbols-outlined text-sm text-primary">campaign</span>
+<span>Broadcast // Message of the Day</span>
+</div>
+<p class="text-xs text-on-surface leading-relaxed">
+          AP Computer Science A mock exam diagnostic module is now loaded under <strong>Matrix Memory Visualizer</strong>. Check runtime stack allocation rules before submitting.
+        </p>
+<div class="flex items-center justify-between text-[11px] font-mono text-outline pt-2">
+<span>SIGNED: MR. PULIDO</span>
+<span>PERIOD 3 & 5</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function runCommand(cmd) {
+    const output = document.getElementById('cli-output');
+    if (!output) return;
+    
+    const cmdLine = document.createElement('p');
+    cmdLine.className = 'text-surface-bright font-bold';
+    cmdLine.textContent = '> ' + cmd;
+    output.appendChild(cmdLine);
+
+    const resLine = document.createElement('p');
+    resLine.className = 'text-primary-fixed';
+
+    if (cmd.includes('ctf-keygen')) {
+      resLine.textContent = '[OK] KEY: 0x9F4C... Token bound to session.';
+    } else if (cmd.includes('clone')) {
+      resLine.textContent = '[OK] Forked template into user sandbox.';
+    } else if (cmd.includes('sysinfo')) {
+      resLine.textContent = '[STATUS] Cluster CPU: 24% | Memory: 41% | Nodes: 1204';
+    } else {
+      resLine.textContent = '[EXEC] Done executing process.';
+    }
+    
+    output.appendChild(resLine);
+    output.scrollTop = output.scrollHeight;
+  }
+
+  function handleInput(input) {
+    if (!input.value.trim()) return;
+    runCommand(input.value.trim());
+    input.value = '';
+  }
+
+  // Filter Pill active toggle
+  document.querySelectorAll('.pill-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.pill-btn').forEach(b => {
+        b.className = 'pill-btn whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-mono font-medium transition-all bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface';
+      });
+      btn.className = 'pill-btn active whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-mono font-semibold transition-all bg-primary text-on-primary shadow-sm hover:opacity-90';
+    });
+  });
+</script></main></div></body></html>
