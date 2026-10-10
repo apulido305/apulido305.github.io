@@ -172,6 +172,18 @@ main { padding: 72px 32px 64px; }
 .el.alt { background: rgba(74,222,128,.14); border-color: rgba(74,222,128,.45); color: #86efac; }
 .el.ghost { opacity: .35; }
 
+/* thumbnail art: Cell Arcade */
+.art-cell { background: radial-gradient(circle at 35% 40%, #14532d 0%, #0f1a14 45%, #17131f 75%); display: grid; place-items: center; }
+.cell { position: relative; width: 210px; height: 128px; transform: translateY(-8px) rotate(-4deg); border-radius: 50%; background: radial-gradient(ellipse at 40% 40%, rgba(74,222,128,.22), rgba(74,222,128,.08)); border: 3px solid rgba(134,239,172,.75); box-shadow: 0 0 28px rgba(74,222,128,.35), inset 0 0 22px rgba(74,222,128,.2); }
+.nucleus { position: absolute; left: 50%; top: 50%; width: 58px; height: 50px; transform: translate(-50%, -50%); border-radius: 50%; background: radial-gradient(circle at 40% 35%, #cfbcff, #6750a4); box-shadow: 0 0 18px rgba(207,188,255,.5); }
+.nucleolus { position: absolute; left: 38%; top: 34%; width: 16px; height: 14px; border-radius: 50%; background: #22005d; opacity: .7; }
+.mito { position: absolute; width: 38px; height: 17px; border-radius: 10px; background: #ffdf93; border: 2px solid #c9a74d; background-image: repeating-linear-gradient(90deg, transparent 0 6px, rgba(118,91,0,.55) 6px 8px); }
+.er { position: absolute; left: 60%; top: 30%; width: 28px; height: 40px; border: 2px solid rgba(255,180,171,.7); border-left: 0; border-radius: 0 16px 16px 0; box-shadow: 5px 0 0 -1px rgba(255,180,171,.45); }
+.ribo { position: absolute; width: 5px; height: 5px; border-radius: 50%; background: #ffb4ab; }
+.vesicle { position: absolute; width: 11px; height: 11px; border-radius: 50%; border: 2px solid rgba(134,239,172,.8); }
+.cell-label { position: absolute; font-size: 10px; color: rgba(220,252,231,.75); }
+.chip.green { background: #dcfce7; color: #14532d; }
+
 /* thumbnail art: Spelling */
 .art-spelling { background: radial-gradient(circle at 30% 20%, #4b3a7a 0%, #16121d 72%); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; }
 .letters { display: flex; gap: 6px; transform: translateY(-8px); }
@@ -288,6 +300,7 @@ footer { margin-top: 48px; font-family: var(--mono); font-size: 11px; color: var
     </label>
     <nav class="quick" aria-label="Quick launch">
       <a href="/elemental-arcade/">Elemental Arcade</a>
+      <a href="/cell-arcade/">Cell Arcade</a>
       <a href="/spelling/">Spelling</a>
       <a href="/multiplication/">Multiplication</a>
     </nav>
@@ -303,7 +316,7 @@ footer { margin-top: 48px; font-family: var(--mono); font-size: 11px; color: var
           <p>Mr. Pulido's study games, all in one place. Pick a game, hit launch, and start practicing right in your browser. No installs needed.</p>
           <div class="badges">
             <div class="badge"><span class="icon" style="color:var(--primary-fixed)">dns</span><span class="k">DEPLOYED:</span><span class="v" id="app-count">3 Apps</span></div>
-            <div class="badge"><span class="icon" style="color:var(--tertiary-fixed)">category</span><span class="k">SUBJECTS:</span><span class="v">Science · Math · Spelling</span></div>
+            <div class="badge"><span class="icon" style="color:var(--tertiary-fixed)">category</span><span class="k">SUBJECTS:</span><span class="v">Biology · Chemistry · Math · Spelling</span></div>
             <div class="badge"><span class="icon" style="color:var(--green)">bolt</span><span class="k">RUNS IN:</span><span class="v">Any Browser</span></div>
           </div>
         </div>
@@ -321,7 +334,7 @@ footer { margin-top: 48px; font-family: var(--mono); font-size: 11px; color: var
     <div class="pills-wrap">
       <div class="pills" role="toolbar" aria-label="Filter by subject">
         <button class="pill active" data-filter="all">All Subsystems</button>
-        <button class="pill" data-filter="science">Science / Chemistry</button>
+        <button class="pill" data-filter="science">Science</button>
         <button class="pill" data-filter="math">Math</button>
         <button class="pill" data-filter="spelling">Spelling / ELA</button>
       </div>
@@ -351,6 +364,37 @@ footer { margin-top: 48px; font-family: var(--mono); font-size: 11px; color: var
               <div class="byline">Mr. Pulido · Science <span class="icon fill">check_circle</span></div>
               <p class="desc">Periodic table card quiz. Answer questions to win element, ion and isotope cards, then battle classmates live in VS Arena.</p>
               <div class="chips"><span class="chip gold">Chemistry</span><span class="chip">Periodic Table</span><span class="chip violet">Multiplayer</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Cell Arcade -->
+        <article class="tile" data-cat="science" data-keys="cell arcade biology science cells organelles biomolecules amino acids codons tree of life organisms human body ecology cards quiz vs arena multiplayer">
+          <a class="thumb" href="/cell-arcade/" aria-label="Launch Cell Arcade">
+            <div class="thumb-art art-cell" aria-hidden="true">
+              <div class="cell">
+                <div class="nucleus"><div class="nucleolus"></div></div>
+                <div class="mito" style="left:14%;top:22%;transform:rotate(-25deg)"></div>
+                <div class="mito" style="right:12%;bottom:20%;transform:rotate(20deg)"></div>
+                <div class="er"></div>
+                <span class="ribo" style="left:30%;bottom:18%"></span><span class="ribo" style="left:38%;bottom:12%"></span>
+                <span class="ribo" style="right:26%;top:16%"></span><span class="ribo" style="right:18%;top:28%"></span>
+                <span class="vesicle" style="left:22%;bottom:30%"></span><span class="vesicle" style="right:30%;top:58%"></span>
+              </div>
+              <span class="cell-label mono" style="left:9%;top:16%">mitochondria</span>
+              <span class="cell-label mono" style="right:8%;top:20%">nucleus</span>
+            </div>
+            <span class="tag-level" style="background:#4ade80;color:#052e16">Card Battler</span>
+            <span class="tag-time">SOLO + VS ARENA</span>
+            <span class="launch"><span class="btn"><span class="icon">play_arrow</span>Launch</span></span>
+          </a>
+          <div class="meta">
+            <div class="avatar" style="background:#dcfce7;color:#14532d"><span class="icon">biotech</span></div>
+            <div class="meta-body">
+              <h3><a href="/cell-arcade/">Cell Arcade</a></h3>
+              <div class="byline">Mr. Pulido · Science <span class="icon fill">check_circle</span></div>
+              <p class="desc">Biology card quiz. Win cell part, biomolecule, organism, human body and ecology cards, then battle classmates live in VS Arena.</p>
+              <div class="chips"><span class="chip green">Biology</span><span class="chip">181 Cards</span><span class="chip violet">Multiplayer</span></div>
             </div>
           </div>
         </article>
@@ -434,7 +478,7 @@ footer { margin-top: 48px; font-family: var(--mono); font-size: 11px; color: var
         <div class="card tips">
           <div class="card-title"><span class="icon">tips_and_updates</span>How to Study</div>
           <ol>
-            <li>Pick a game from the grid or type <code>./play spelling</code> in the CLI.</li>
+            <li>Pick a game from the grid or type <code>./play cell</code> in the CLI.</li>
             <li>Practice a little every day. The flashcard games track your streak.</li>
             <li>Progress saves in this browser, so use the same device when you can.</li>
           </ol>
@@ -450,10 +494,12 @@ footer { margin-top: 48px; font-family: var(--mono); font-size: 11px; color: var
 (function () {
   var APPS = {
     elemental: { name: "Elemental Arcade", url: "/elemental-arcade/", cat: "science" },
+    cell: { name: "Cell Arcade", url: "/cell-arcade/", cat: "science" },
     spelling: { name: "Spelling Flashcards", url: "/spelling/", cat: "spelling" },
     multiplication: { name: "Multiplication Practice", url: "/multiplication/", cat: "math" }
   };
-  var ALIASES = { element: "elemental", elements: "elemental", chem: "elemental", chemistry: "elemental", science: "elemental",
+  var ALIASES = { element: "elemental", elements: "elemental", chem: "elemental", chemistry: "elemental",
+    cells: "cell", bio: "cell", biology: "cell",
     spell: "spelling", words: "spelling", math: "multiplication", mult: "multiplication", times: "multiplication" };
 
   var tiles = Array.prototype.slice.call(document.querySelectorAll(".tile"));
@@ -530,7 +576,7 @@ footer { margin-top: 48px; font-family: var(--mono); font-size: 11px; color: var
     switch (verb) {
       case "help":
         line("ls apps          list every app", "info");
-        line("./play <name>    launch an app (elemental, spelling, multiplication, random)", "info");
+        line("./play <name>    launch an app (elemental, cell, spelling, multiplication, random)", "info");
         line("grep <word>      search the grid", "info");
         line("clear            clear this screen", "info");
         break;
