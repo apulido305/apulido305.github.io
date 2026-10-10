@@ -12,8 +12,8 @@ project Pages site on the account: a repo `foo` with Pages turned on is served a
 | App | Live URL | Repo |
 |---|---|---|
 | Elemental Arcade | https://mrpulido.com/elemental-arcade/ | [elemental-arcade](https://github.com/apulido305/elemental-arcade) |
-| Spelling Flashcards | https://mrpulido.com/spelling-flashcard-game/ | [spelling-flashcard-game](https://github.com/apulido305/spelling-flashcard-game) |
-| Multiplication Practice | https://mrpulido.com/multiplication-flashcard-game/ | [multiplication-flashcard-game](https://github.com/apulido305/multiplication-flashcard-game) |
+| Spelling Flashcards | https://mrpulido.com/spelling/ | [spelling](https://github.com/apulido305/spelling) |
+| Multiplication Practice | https://mrpulido.com/multiplication/ | [multiplication](https://github.com/apulido305/multiplication) |
 
 ## Adding an app
 
@@ -30,3 +30,6 @@ project Pages site on the account: a repo `foo` with Pages turned on is served a
 - `CNAME` `www` → `apulido305.github.io`
 
 `design/` holds the original mockup (`code.html`, `screen.png`) and is not linked from the site.
+
+`spelling-flashcard-game/` and `multiplication-flashcard-game/` are redirect pages for the games' old paths
+(the repos were renamed to `spelling` and `multiplication`).
