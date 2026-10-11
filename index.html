@@ -184,6 +184,20 @@ main { padding: 72px 32px 64px; }
 .cell-label { position: absolute; font-size: 10px; color: rgba(220,252,231,.75); }
 .chip.green { background: #dcfce7; color: #14532d; }
 
+/* thumbnail art: Space Arcade */
+.art-space { background: radial-gradient(circle at 25% 30%, #2e1f5e 0%, #110d1c 55%, #08060e 100%); display: grid; place-items: center; overflow: hidden; }
+.star { position: absolute; width: 2px; height: 2px; border-radius: 50%; background: #f5eff7; opacity: .7; }
+.orbit-sys { position: relative; width: 220px; height: 120px; transform: translateY(-8px) rotate(-8deg); }
+.orbit { position: absolute; left: 50%; top: 50%; border: 1px solid rgba(207,188,255,.28); border-radius: 50%; transform: translate(-50%, -50%); }
+.sun { position: absolute; left: 50%; top: 50%; width: 34px; height: 34px; transform: translate(-50%, -50%); border-radius: 50%; background: radial-gradient(circle at 40% 35%, #fff4cc, #ffdf93 45%, #c9a74d); box-shadow: 0 0 30px rgba(255,223,147,.7); }
+.planet { position: absolute; border-radius: 50%; }
+.planet.earth { width: 16px; height: 16px; background: radial-gradient(circle at 35% 35%, #93c5fd, #2563eb 60%, #1e3a8a); box-shadow: inset -3px -2px 0 rgba(74,222,128,.6), 0 0 10px rgba(147,197,253,.5); }
+.planet.mars { width: 10px; height: 10px; background: radial-gradient(circle at 35% 35%, #fdba74, #c2410c); }
+.planet.ringed { width: 22px; height: 22px; background: radial-gradient(circle at 35% 35%, #fde68a, #b45309); }
+.planet.ringed::after { content: ""; position: absolute; left: -8px; top: 8px; width: 34px; height: 6px; border: 2px solid rgba(253,230,138,.7); border-radius: 50%; transform: rotate(-15deg); }
+.space-label { position: absolute; font-size: 10px; color: rgba(221,214,254,.75); }
+.chip.blue { background: #dbeafe; color: #1e3a8a; }
+
 /* thumbnail art: Spelling */
 .art-spelling { background: radial-gradient(circle at 30% 20%, #4b3a7a 0%, #16121d 72%); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; }
 .letters { display: flex; gap: 6px; transform: translateY(-8px); }
@@ -301,6 +315,7 @@ footer { margin-top: 48px; font-family: var(--mono); font-size: 11px; color: var
     <nav class="quick" aria-label="Quick launch">
       <a href="/elemental-arcade/">Elemental Arcade</a>
       <a href="/cell-arcade/">Cell Arcade</a>
+      <a href="/earthspace/">Space Arcade</a>
       <a href="/spelling/">Spelling</a>
       <a href="/multiplication/">Multiplication</a>
     </nav>
@@ -315,8 +330,8 @@ footer { margin-top: 48px; font-family: var(--mono); font-size: 11px; color: var
           <h1>PULIDO_CORE <span class="slash">//</span> <span class="grad">APP_HUB</span></h1>
           <p>Mr. Pulido's study games, all in one place. Pick a game, hit launch, and start practicing right in your browser. No installs needed.</p>
           <div class="badges">
-            <div class="badge"><span class="icon" style="color:var(--primary-fixed)">dns</span><span class="k">DEPLOYED:</span><span class="v" id="app-count">3 Apps</span></div>
-            <div class="badge"><span class="icon" style="color:var(--tertiary-fixed)">category</span><span class="k">SUBJECTS:</span><span class="v">Biology · Chemistry · Math · Spelling</span></div>
+            <div class="badge"><span class="icon" style="color:var(--primary-fixed)">dns</span><span class="k">DEPLOYED:</span><span class="v" id="app-count">5 Apps</span></div>
+            <div class="badge"><span class="icon" style="color:var(--tertiary-fixed)">category</span><span class="k">SUBJECTS:</span><span class="v">Biology · Chemistry · Earth &amp; Space · Math · Spelling</span></div>
             <div class="badge"><span class="icon" style="color:var(--green)">bolt</span><span class="k">RUNS IN:</span><span class="v">Any Browser</span></div>
           </div>
         </div>
@@ -395,6 +410,40 @@ footer { margin-top: 48px; font-family: var(--mono); font-size: 11px; color: var
               <div class="byline">Mr. Pulido · Science <span class="icon fill">check_circle</span></div>
               <p class="desc">Biology card quiz. Win cell part, biomolecule, organism, human body and ecology cards, then battle classmates live in VS Arena.</p>
               <div class="chips"><span class="chip green">Biology</span><span class="chip">181 Cards</span><span class="chip violet">Multiplayer</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Space Arcade -->
+        <article class="tile" data-cat="science" data-keys="space arcade earth space science astronomy weather climate rocks plates geology deep time solar system planets sky moon stars galaxies cosmos exploration ngss cards quiz vs arena multiplayer">
+          <a class="thumb" href="/earthspace/" aria-label="Launch Space Arcade">
+            <div class="thumb-art art-space" aria-hidden="true">
+              <span class="star" style="left:8%;top:14%"></span><span class="star" style="left:22%;top:70%"></span>
+              <span class="star" style="left:40%;top:10%"></span><span class="star" style="left:64%;top:80%"></span>
+              <span class="star" style="left:82%;top:22%"></span><span class="star" style="left:90%;top:62%"></span>
+              <div class="orbit-sys">
+                <div class="orbit" style="width:96px;height:52px"></div>
+                <div class="orbit" style="width:150px;height:82px"></div>
+                <div class="orbit" style="width:212px;height:116px"></div>
+                <div class="sun"></div>
+                <div class="planet earth" style="left:69%;top:40%"></div>
+                <div class="planet mars" style="left:16%;top:30%"></div>
+                <div class="planet ringed" style="left:84%;top:66%"></div>
+              </div>
+              <span class="space-label mono" style="left:8%;top:12%">solar system</span>
+              <span class="space-label mono" style="right:8%;bottom:28%">earth</span>
+            </div>
+            <span class="tag-level" style="background:#93c5fd;color:#172554">Card Battler</span>
+            <span class="tag-time">SOLO + VS ARENA</span>
+            <span class="launch"><span class="btn"><span class="icon">play_arrow</span>Launch</span></span>
+          </a>
+          <div class="meta">
+            <div class="avatar" style="background:#dbeafe;color:#1e3a8a"><span class="icon">public</span></div>
+            <div class="meta-body">
+              <h3><a href="/earthspace/">Space Arcade</a></h3>
+              <div class="byline">Mr. Pulido · Science <span class="icon fill">check_circle</span></div>
+              <p class="desc">Earth &amp; Space card quiz. Win weather, climate, rock, solar system, star and cosmos cards, then battle classmates live in VS Arena.</p>
+              <div class="chips"><span class="chip blue">Earth &amp; Space</span><span class="chip">193 Cards</span><span class="chip violet">Multiplayer</span></div>
             </div>
           </div>
         </article>
@@ -495,12 +544,14 @@ footer { margin-top: 48px; font-family: var(--mono); font-size: 11px; color: var
   var APPS = {
     elemental: { name: "Elemental Arcade", url: "/elemental-arcade/", cat: "science" },
     cell: { name: "Cell Arcade", url: "/cell-arcade/", cat: "science" },
+    space: { name: "Space Arcade", url: "/earthspace/", cat: "science" },
     spelling: { name: "Spelling Flashcards", url: "/spelling/", cat: "spelling" },
     multiplication: { name: "Multiplication Practice", url: "/multiplication/", cat: "math" }
   };
   var ALIASES = { element: "elemental", elements: "elemental", chem: "elemental", chemistry: "elemental",
     cells: "cell", bio: "cell", biology: "cell",
-    spell: "spelling", words: "spelling", math: "multiplication", mult: "multiplication", times: "multiplication" };
+    earth: "space", earthspace: "space", astronomy: "space", planets: "space", stars: "space",
+    sp: "spelling", spell: "spelling", words: "spelling", math: "multiplication", mult: "multiplication", times: "multiplication" };
 
   var tiles = Array.prototype.slice.call(document.querySelectorAll(".tile"));
   var filterBtns = Array.prototype.slice.call(document.querySelectorAll("[data-filter]"));
@@ -576,7 +627,7 @@ footer { margin-top: 48px; font-family: var(--mono); font-size: 11px; color: var
     switch (verb) {
       case "help":
         line("ls apps          list every app", "info");
-        line("./play <name>    launch an app (elemental, cell, spelling, multiplication, random)", "info");
+        line("./play <name>    launch an app (elemental, cell, space, spelling, multiplication, random)", "info");
         line("grep <word>      search the grid", "info");
         line("clear            clear this screen", "info");
         break;
