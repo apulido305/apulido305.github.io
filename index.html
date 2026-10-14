@@ -198,6 +198,16 @@ main { padding: 72px 32px 64px; }
 .space-label { position: absolute; font-size: 10px; color: rgba(221,214,254,.75); }
 .chip.blue { background: #dbeafe; color: #1e3a8a; }
 
+/* thumbnail art: Code Arcade */
+.art-code { background: radial-gradient(circle at 70% 25%, #0f3d3a 0%, #0b1416 55%, #07090c 100%); display: grid; place-items: center; overflow: hidden; }
+.term { width: 78%; max-width: 250px; border-radius: 8px; background: rgba(6,10,12,.85); border: 1px solid rgba(94,234,212,.35); box-shadow: 0 8px 24px rgba(0,0,0,.45); font-size: 12px; line-height: 1.55; }
+.term-bar { display: flex; gap: 5px; padding: 6px 8px; border-bottom: 1px solid rgba(94,234,212,.18); }
+.term-bar i { width: 7px; height: 7px; border-radius: 50%; background: #334155; }
+.term-bar i:first-child { background: #f87171; } .term-bar i:nth-child(2) { background: #fbbf24; } .term-bar i:nth-child(3) { background: #4ade80; }
+.term pre { margin: 0; padding: 8px 10px; color: #ccfbf1; white-space: pre; }
+.term .kw { color: #f0abfc; } .term .fn { color: #5eead4; } .term .num { color: #fcd34d; } .term .cur { display: inline-block; width: 7px; height: 12px; background: #5eead4; vertical-align: -2px; }
+.chip.teal { background: #ccfbf1; color: #134e4a; }
+
 /* thumbnail art: Spelling */
 .art-spelling { background: radial-gradient(circle at 30% 20%, #4b3a7a 0%, #16121d 72%); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; }
 .letters { display: flex; gap: 6px; transform: translateY(-8px); }
@@ -295,6 +305,7 @@ footer { margin-top: 48px; font-family: var(--mono); font-size: 11px; color: var
     <div class="side-label">Study Games</div>
     <button class="side-link active" data-filter="all"><span class="icon">grid_view</span>All Apps</button>
     <button class="side-link" data-filter="science"><span class="icon">science</span>Science</button>
+    <button class="side-link" data-filter="cs"><span class="icon">code</span>Computer Science</button>
     <button class="side-link" data-filter="math"><span class="icon">calculate</span>Math</button>
     <button class="side-link" data-filter="spelling"><span class="icon">spellcheck</span>Spelling</button>
     <div class="side-label">Class Infrastructure</div>
@@ -316,6 +327,7 @@ footer { margin-top: 48px; font-family: var(--mono); font-size: 11px; color: var
       <a href="https://apulido305.github.io/elemental-arcade/">Elemental Arcade</a>
       <a href="https://apulido305.github.io/cell-arcade/">Cell Arcade</a>
       <a href="https://apulido305.github.io/earthspace/">Space Arcade</a>
+      <a href="https://apulido305.github.io/code-arcade/">Code Arcade</a>
       <a href="https://apulido305.github.io/spelling/">Spelling</a>
       <a href="https://apulido305.github.io/multiplication/">Multiplication</a>
     </nav>
@@ -330,8 +342,8 @@ footer { margin-top: 48px; font-family: var(--mono); font-size: 11px; color: var
           <h1>PULIDO_CORE <span class="slash">//</span> <span class="grad">APP_HUB</span></h1>
           <p>Mr. Pulido's study games, all in one place. Pick a game, hit launch, and start practicing right in your browser. No installs needed.</p>
           <div class="badges">
-            <div class="badge"><span class="icon" style="color:var(--primary-fixed)">dns</span><span class="k">DEPLOYED:</span><span class="v" id="app-count">5 Apps</span></div>
-            <div class="badge"><span class="icon" style="color:var(--tertiary-fixed)">category</span><span class="k">SUBJECTS:</span><span class="v">Biology · Chemistry · Earth &amp; Space · Math · Spelling</span></div>
+            <div class="badge"><span class="icon" style="color:var(--primary-fixed)">dns</span><span class="k">DEPLOYED:</span><span class="v" id="app-count">6 Apps</span></div>
+            <div class="badge"><span class="icon" style="color:var(--tertiary-fixed)">category</span><span class="k">SUBJECTS:</span><span class="v">Biology · Chemistry · Earth &amp; Space · Computer Science · Math · Spelling</span></div>
             <div class="badge"><span class="icon" style="color:var(--green)">bolt</span><span class="k">RUNS IN:</span><span class="v">Any Browser</span></div>
           </div>
         </div>
@@ -350,6 +362,7 @@ footer { margin-top: 48px; font-family: var(--mono); font-size: 11px; color: var
       <div class="pills" role="toolbar" aria-label="Filter by subject">
         <button class="pill active" data-filter="all">All Subsystems</button>
         <button class="pill" data-filter="science">Science</button>
+        <button class="pill" data-filter="cs">Computer Science</button>
         <button class="pill" data-filter="math">Math</button>
         <button class="pill" data-filter="spelling">Spelling / ELA</button>
       </div>
@@ -444,6 +457,33 @@ footer { margin-top: 48px; font-family: var(--mono); font-size: 11px; color: var
               <div class="byline">Mr. Pulido · Science <span class="icon fill">check_circle</span></div>
               <p class="desc">Earth &amp; Space card quiz. Win weather, climate, rock, solar system, star and cosmos cards, then battle classmates live in VS Arena.</p>
               <div class="chips"><span class="chip blue">Earth &amp; Space</span><span class="chip">193 Cards</span><span class="chip violet">Multiplayer</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Code Arcade -->
+        <article class="tile" data-cat="cs" data-keys="code arcade computer science cs python programming coding codehs tracy turtle graphics variables loops functions conditionals lists strings debugging cards quiz vs arena multiplayer">
+          <a class="thumb" href="https://apulido305.github.io/code-arcade/" aria-label="Launch Code Arcade">
+            <div class="thumb-art art-code" aria-hidden="true">
+              <div class="term mono">
+                <div class="term-bar"><i></i><i></i><i></i></div>
+<pre><span class="kw">for</span> i <span class="kw">in</span> <span class="fn">range</span>(<span class="num">4</span>):
+    <span class="fn">forward</span>(<span class="num">50</span>)
+    <span class="fn">left</span>(<span class="num">90</span>)
+<span class="cur"></span></pre>
+              </div>
+            </div>
+            <span class="tag-level" style="background:#5eead4;color:#042f2e">Card Battler</span>
+            <span class="tag-time">SOLO + VS ARENA</span>
+            <span class="launch"><span class="btn"><span class="icon">play_arrow</span>Launch</span></span>
+          </a>
+          <div class="meta">
+            <div class="avatar" style="background:#ccfbf1;color:#134e4a"><span class="icon">code</span></div>
+            <div class="meta-body">
+              <h3><a href="https://apulido305.github.io/code-arcade/">Code Arcade</a></h3>
+              <div class="byline">Mr. Pulido · Computer Science <span class="icon fill">check_circle</span></div>
+              <p class="desc">Intro Python card quiz (CodeHS Python Basics with Tracy). Read code, predict output, fix bugs and steer Tracy the turtle, then battle classmates live in VS Arena.</p>
+              <div class="chips"><span class="chip teal">Python</span><span class="chip">151 Cards</span><span class="chip violet">Multiplayer</span></div>
             </div>
           </div>
         </article>
@@ -545,12 +585,14 @@ footer { margin-top: 48px; font-family: var(--mono); font-size: 11px; color: var
     elemental: { name: "Elemental Arcade", url: "https://apulido305.github.io/elemental-arcade/", cat: "science" },
     cell: { name: "Cell Arcade", url: "https://apulido305.github.io/cell-arcade/", cat: "science" },
     space: { name: "Space Arcade", url: "https://apulido305.github.io/earthspace/", cat: "science" },
+    code: { name: "Code Arcade", url: "https://apulido305.github.io/code-arcade/", cat: "cs" },
     spelling: { name: "Spelling Flashcards", url: "https://apulido305.github.io/spelling/", cat: "spelling" },
     multiplication: { name: "Multiplication Practice", url: "https://apulido305.github.io/multiplication/", cat: "math" }
   };
   var ALIASES = { element: "elemental", elements: "elemental", chem: "elemental", chemistry: "elemental",
     cells: "cell", bio: "cell", biology: "cell",
     earth: "space", earthspace: "space", astronomy: "space", planets: "space", stars: "space",
+    python: "code", py: "code", cs: "code", coding: "code", tracy: "code", turtle: "code",
     sp: "spelling", spell: "spelling", words: "spelling", math: "multiplication", mult: "multiplication", times: "multiplication" };
 
   var tiles = Array.prototype.slice.call(document.querySelectorAll(".tile"));
@@ -627,7 +669,7 @@ footer { margin-top: 48px; font-family: var(--mono); font-size: 11px; color: var
     switch (verb) {
       case "help":
         line("ls apps          list every app", "info");
-        line("./play <name>    launch an app (elemental, cell, space, spelling, multiplication, random)", "info");
+        line("./play <name>    launch an app (elemental, cell, space, code, spelling, multiplication, random)", "info");
         line("grep <word>      search the grid", "info");
         line("clear            clear this screen", "info");
         break;
