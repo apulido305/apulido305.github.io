@@ -208,6 +208,15 @@ main { padding: 72px 32px 64px; }
 .term .kw { color: #f0abfc; } .term .fn { color: #5eead4; } .term .num { color: #fcd34d; } .term .cur { display: inline-block; width: 7px; height: 12px; background: #5eead4; vertical-align: -2px; }
 .chip.teal { background: #ccfbf1; color: #134e4a; }
 
+/* thumbnail art: Scripture Arcade */
+.art-bible { background: radial-gradient(circle at 50% 120%, #f6c97a 0%, #3a4f8f 38%, #111a3a 70%, #070b1c 100%); display: grid; place-items: center; overflow: hidden; }
+.art-bible .ray { position: absolute; bottom: -10%; left: 50%; width: 140%; height: 140%; transform: translateX(-50%); background: conic-gradient(from 180deg at 50% 100%, transparent 0 20deg, rgba(255,236,190,.10) 24deg, transparent 30deg 44deg, rgba(255,236,190,.08) 48deg, transparent 54deg 70deg, rgba(255,236,190,.10) 74deg, transparent 80deg 360deg); }
+.art-bible .dot { position: absolute; width: 2px; height: 2px; border-radius: 50%; background: #e0f2fe; box-shadow: 0 0 6px #bae6fd; }
+.parch { position: relative; width: 62%; max-width: 200px; padding: 14px 12px 12px; border-radius: 6px; background: linear-gradient(180deg, #f8ecd0, #e9d3a6); color: #3b2a14; text-align: center; box-shadow: 0 10px 26px rgba(0,0,0,.5), 0 0 30px rgba(94,200,240,.25); font-family: Georgia, 'Times New Roman', serif; }
+.parch .ref { font-size: 22px; font-weight: 700; letter-spacing: .5px; }
+.parch .niv { margin-top: 4px; font-size: 10px; letter-spacing: 3px; color: #7a5a2e; }
+.chip.sky { background: #e0f2fe; color: #0c4a6e; }
+
 /* thumbnail art: Spelling */
 .art-spelling { background: radial-gradient(circle at 30% 20%, #4b3a7a 0%, #16121d 72%); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; }
 .letters { display: flex; gap: 6px; transform: translateY(-8px); }
@@ -306,6 +315,7 @@ footer { margin-top: 48px; font-family: var(--mono); font-size: 11px; color: var
     <button class="side-link active" data-filter="all"><span class="icon">grid_view</span>All Apps</button>
     <button class="side-link" data-filter="science"><span class="icon">science</span>Science</button>
     <button class="side-link" data-filter="cs"><span class="icon">code</span>Computer Science</button>
+    <button class="side-link" data-filter="bible"><span class="icon">menu_book</span>Bible</button>
     <button class="side-link" data-filter="math"><span class="icon">calculate</span>Math</button>
     <button class="side-link" data-filter="spelling"><span class="icon">spellcheck</span>Spelling</button>
     <div class="side-label">Class Infrastructure</div>
@@ -328,6 +338,7 @@ footer { margin-top: 48px; font-family: var(--mono); font-size: 11px; color: var
       <a href="https://apulido305.github.io/cell-arcade/">Cell Arcade</a>
       <a href="https://apulido305.github.io/earthspace/">Space Arcade</a>
       <a href="https://apulido305.github.io/code-arcade/">Code Arcade</a>
+      <a href="https://apulido305.github.io/bible-arcade/">Scripture Arcade</a>
       <a href="https://apulido305.github.io/spelling/">Spelling</a>
       <a href="https://apulido305.github.io/multiplication/">Multiplication</a>
     </nav>
@@ -342,8 +353,8 @@ footer { margin-top: 48px; font-family: var(--mono); font-size: 11px; color: var
           <h1>PULIDO_CORE <span class="slash">//</span> <span class="grad">APP_HUB</span></h1>
           <p>Mr. Pulido's study games, all in one place. Pick a game, hit launch, and start practicing right in your browser. No installs needed.</p>
           <div class="badges">
-            <div class="badge"><span class="icon" style="color:var(--primary-fixed)">dns</span><span class="k">DEPLOYED:</span><span class="v" id="app-count">6 Apps</span></div>
-            <div class="badge"><span class="icon" style="color:var(--tertiary-fixed)">category</span><span class="k">SUBJECTS:</span><span class="v">Biology · Chemistry · Earth &amp; Space · Computer Science · Math · Spelling</span></div>
+            <div class="badge"><span class="icon" style="color:var(--primary-fixed)">dns</span><span class="k">DEPLOYED:</span><span class="v" id="app-count">7 Apps</span></div>
+            <div class="badge"><span class="icon" style="color:var(--tertiary-fixed)">category</span><span class="k">SUBJECTS:</span><span class="v">Bible · Biology · Chemistry · Earth &amp; Space · Computer Science · Math · Spelling</span></div>
             <div class="badge"><span class="icon" style="color:var(--green)">bolt</span><span class="k">RUNS IN:</span><span class="v">Any Browser</span></div>
           </div>
         </div>
@@ -363,6 +374,7 @@ footer { margin-top: 48px; font-family: var(--mono); font-size: 11px; color: var
         <button class="pill active" data-filter="all">All Subsystems</button>
         <button class="pill" data-filter="science">Science</button>
         <button class="pill" data-filter="cs">Computer Science</button>
+        <button class="pill" data-filter="bible">Bible</button>
         <button class="pill" data-filter="math">Math</button>
         <button class="pill" data-filter="spelling">Spelling / ELA</button>
       </div>
@@ -488,6 +500,29 @@ footer { margin-top: 48px; font-family: var(--mono); font-size: 11px; color: var
           </div>
         </article>
 
+        <!-- Scripture Arcade -->
+        <article class="tile" data-cat="bible" data-keys="scripture arcade bible niv memory verse verses scripture memorization books of the bible old testament new testament psalms gospels cards quiz vs arena multiplayer">
+          <a class="thumb" href="https://apulido305.github.io/bible-arcade/" aria-label="Launch Scripture Arcade">
+            <div class="thumb-art art-bible" aria-hidden="true">
+              <div class="ray"></div>
+              <i class="dot" style="left:12%;top:16%"></i><i class="dot" style="left:28%;top:8%"></i><i class="dot" style="left:74%;top:12%"></i><i class="dot" style="left:88%;top:26%"></i><i class="dot" style="left:60%;top:6%"></i>
+              <div class="parch"><div class="ref">Psalm 119:105</div><div class="niv">NIV</div></div>
+            </div>
+            <span class="tag-level" style="background:#5ec8f0;color:#082f49">Card Battler</span>
+            <span class="tag-time">SOLO + VS ARENA</span>
+            <span class="launch"><span class="btn"><span class="icon">play_arrow</span>Launch</span></span>
+          </a>
+          <div class="meta">
+            <div class="avatar" style="background:#e0f2fe;color:#0c4a6e"><span class="icon">menu_book</span></div>
+            <div class="meta-body">
+              <h3><a href="https://apulido305.github.io/bible-arcade/">Scripture Arcade</a></h3>
+              <div class="byline">Mr. Pulido · Bible <span class="icon fill">check_circle</span></div>
+              <p class="desc">NIV memory verse card quiz. Name the reference, fill the gap, finish the verse and put the books of the Bible in order, then battle classmates live in VS Arena.</p>
+              <div class="chips"><span class="chip sky">NIV</span><span class="chip">173 Cards</span><span class="chip violet">Multiplayer</span></div>
+            </div>
+          </div>
+        </article>
+
         <!-- Spelling -->
         <article class="tile" data-cat="spelling" data-keys="spelling flashcards words ela english reading vocabulary">
           <a class="thumb" href="https://apulido305.github.io/spelling/" aria-label="Launch Spelling Flashcards">
@@ -586,6 +621,7 @@ footer { margin-top: 48px; font-family: var(--mono); font-size: 11px; color: var
     cell: { name: "Cell Arcade", url: "https://apulido305.github.io/cell-arcade/", cat: "science" },
     space: { name: "Space Arcade", url: "https://apulido305.github.io/earthspace/", cat: "science" },
     code: { name: "Code Arcade", url: "https://apulido305.github.io/code-arcade/", cat: "cs" },
+    bible: { name: "Scripture Arcade", url: "https://apulido305.github.io/bible-arcade/", cat: "bible" },
     spelling: { name: "Spelling Flashcards", url: "https://apulido305.github.io/spelling/", cat: "spelling" },
     multiplication: { name: "Multiplication Practice", url: "https://apulido305.github.io/multiplication/", cat: "math" }
   };
@@ -593,6 +629,7 @@ footer { margin-top: 48px; font-family: var(--mono); font-size: 11px; color: var
     cells: "cell", bio: "cell", biology: "cell",
     earth: "space", earthspace: "space", astronomy: "space", planets: "space", stars: "space",
     python: "code", py: "code", cs: "code", coding: "code", tracy: "code", turtle: "code",
+    scripture: "bible", niv: "bible", verse: "bible", verses: "bible",
     sp: "spelling", spell: "spelling", words: "spelling", math: "multiplication", mult: "multiplication", times: "multiplication" };
 
   var tiles = Array.prototype.slice.call(document.querySelectorAll(".tile"));
@@ -669,7 +706,7 @@ footer { margin-top: 48px; font-family: var(--mono); font-size: 11px; color: var
     switch (verb) {
       case "help":
         line("ls apps          list every app", "info");
-        line("./play <name>    launch an app (elemental, cell, space, code, spelling, multiplication, random)", "info");
+        line("./play <name>    launch an app (elemental, cell, space, code, bible, spelling, multiplication, random)", "info");
         line("grep <word>      search the grid", "info");
         line("clear            clear this screen", "info");
         break;
