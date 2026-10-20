@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mr. Pulido's App Hub</title>
-<meta name="description" content="Mr. Pulido's study games: Elemental Arcade, Spelling Flashcards and Multiplication Practice.">
+<meta name="description" content="Mr. Pulido's study games: Elemental, Cell, Space, Code, Scripture, Math, Physics and History Arcade, Spelling Flashcards and Multiplication Practice.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%236750a4'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='16' font-weight='700' fill='%23e9ddff' text-anchor='middle'%3E%3E_%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -217,6 +217,24 @@ main { padding: 72px 32px 64px; }
 .parch .niv { margin-top: 4px; font-size: 10px; letter-spacing: 3px; color: #7a5a2e; }
 .chip.sky { background: #e0f2fe; color: #0c4a6e; }
 
+/* thumbnail art: Physics Arcade */
+.art-phys { background: radial-gradient(circle at 50% 45%, #1d1640 0%, #121626 50%, #0a0c16 100%); display: grid; place-items: center; overflow: hidden; }
+.art-phys .wave { position: absolute; left: 0; right: 0; top: 50%; height: 2px; background: repeating-linear-gradient(90deg, rgba(0,240,255,.0) 0 6px, rgba(0,240,255,.35) 6px 12px); }
+.atom { position: relative; width: 120px; height: 120px; }
+.atom i { position: absolute; inset: 0; border: 2px solid #00f0ff; border-radius: 50%; transform: rotate(var(--r)) scaleY(.36); box-shadow: 0 0 10px rgba(0,240,255,.45); }
+.atom i:nth-child(2) { border-color: #9d4edd; box-shadow: 0 0 10px rgba(157,78,221,.5); }
+.atom i:nth-child(3) { border-color: #ff007f; box-shadow: 0 0 10px rgba(255,0,127,.45); }
+.atom b { position: absolute; left: 50%; top: 50%; width: 16px; height: 16px; margin: -8px; border-radius: 50%; background: #ffb800; box-shadow: 0 0 14px #ffb800; }
+.chip.cyan { background: #cffafe; color: #164e63; }
+
+/* thumbnail art: History Arcade */
+.art-hist { background: radial-gradient(circle at 50% 40%, #3b2f1e 0%, #1c1710 60%, #0e0b07 100%); display: grid; place-items: center; overflow: hidden; }
+.rose { position: relative; width: 112px; height: 112px; border-radius: 50%; border: 2px solid #c9a978; box-shadow: 0 0 0 6px rgba(201,169,120,.12), 0 10px 26px rgba(0,0,0,.5); }
+.rose i { position: absolute; left: 50%; top: 50%; width: 14px; height: 96px; margin: -48px 0 0 -7px; background: linear-gradient(#e9d3a6 0 50%, #8a6b3e 50% 100%); clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); transform: rotate(var(--r)); }
+.rose i:nth-child(n+3) { width: 9px; height: 70px; margin: -35px 0 0 -4.5px; opacity: .7; }
+.rose b { position: absolute; left: 50%; top: 50%; width: 10px; height: 10px; margin: -5px; border-radius: 50%; background: #c9a978; }
+.chip.tan { background: #f3e8d2; color: #5b4321; }
+
 /* thumbnail art: Spelling */
 .art-spelling { background: radial-gradient(circle at 30% 20%, #4b3a7a 0%, #16121d 72%); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; }
 .letters { display: flex; gap: 6px; transform: translateY(-8px); }
@@ -226,6 +244,12 @@ main { padding: 72px 32px 64px; }
 .letter.blank { background: transparent; color: #ffdf93; border: 2px dashed #ffdf93; box-shadow: none; animation: blink 1.2s steps(1) infinite; }
 .spell-hint { font-family: var(--mono); font-size: 11px; color: #cbc4d2; transform: translateY(-8px); }
 .spell-hint b { color: #4ade80; font-weight: 500; }
+
+/* thumbnail art: Math Arcade */
+.art-math { background: #101433; background-image: linear-gradient(rgba(122,132,214,.18) 1px, transparent 1px), linear-gradient(90deg, rgba(122,132,214,.18) 1px, transparent 1px); background-size: 16px 16px; display: grid; place-items: center; overflow: hidden; }
+.art-math svg { width: 78%; max-width: 260px; height: auto; }
+.art-math .eq { position: absolute; right: 10%; top: 12%; font-family: Georgia, 'Times New Roman', serif; font-style: italic; font-size: 22px; color: #ffb3cc; }
+.chip.pink { background: #ffe3ee; color: #831843; }
 
 /* thumbnail art: Multiplication */
 .art-math { background: radial-gradient(circle at 75% 70%, #4a3b10 0%, #17131f 65%); display: grid; place-items: center; }
@@ -317,6 +341,7 @@ footer { margin-top: 48px; font-family: var(--mono); font-size: 11px; color: var
     <button class="side-link" data-filter="cs"><span class="icon">code</span>Computer Science</button>
     <button class="side-link" data-filter="bible"><span class="icon">menu_book</span>Bible</button>
     <button class="side-link" data-filter="math"><span class="icon">calculate</span>Math</button>
+    <button class="side-link" data-filter="history"><span class="icon">history_edu</span>History</button>
     <button class="side-link" data-filter="spelling"><span class="icon">spellcheck</span>Spelling</button>
     <div class="side-label">Class Infrastructure</div>
     <span class="side-link" aria-disabled="true"><span class="icon">security</span>Cyber Labs<span class="soon">soon</span></span>
@@ -340,6 +365,9 @@ footer { margin-top: 48px; font-family: var(--mono); font-size: 11px; color: var
       <a href="https://apulido305.github.io/code-arcade/">Code Arcade</a>
       <a href="https://apulido305.github.io/bible-arcade/">Scripture Arcade</a>
       <a href="https://apulido305.github.io/spelling/">Spelling</a>
+      <a href="https://apulido305.github.io/math-arcade/">Math Arcade</a>
+      <a href="https://apulido305.github.io/physics-arcade/">Physics Arcade</a>
+      <a href="https://apulido305.github.io/history-arcade/">History Arcade</a>
       <a href="https://apulido305.github.io/multiplication/">Multiplication</a>
     </nav>
   </header>
@@ -353,7 +381,7 @@ footer { margin-top: 48px; font-family: var(--mono); font-size: 11px; color: var
           <h1>PULIDO_CORE <span class="slash">//</span> <span class="grad">APP_HUB</span></h1>
           <p>Mr. Pulido's study games, all in one place. Pick a game, hit launch, and start practicing right in your browser. No installs needed.</p>
           <div class="badges">
-            <div class="badge"><span class="icon" style="color:var(--primary-fixed)">dns</span><span class="k">DEPLOYED:</span><span class="v" id="app-count">7 Apps</span></div>
+            <div class="badge"><span class="icon" style="color:var(--primary-fixed)">dns</span><span class="k">DEPLOYED:</span><span class="v" id="app-count">8 Apps</span></div>
             <div class="badge"><span class="icon" style="color:var(--tertiary-fixed)">category</span><span class="k">SUBJECTS:</span><span class="v">Bible · Biology · Chemistry · Earth &amp; Space · Computer Science · Math · Spelling</span></div>
             <div class="badge"><span class="icon" style="color:var(--green)">bolt</span><span class="k">RUNS IN:</span><span class="v">Any Browser</span></div>
           </div>
@@ -376,6 +404,7 @@ footer { margin-top: 48px; font-family: var(--mono); font-size: 11px; color: var
         <button class="pill" data-filter="cs">Computer Science</button>
         <button class="pill" data-filter="bible">Bible</button>
         <button class="pill" data-filter="math">Math</button>
+        <button class="pill" data-filter="history">History</button>
         <button class="pill" data-filter="spelling">Spelling / ELA</button>
       </div>
     </div>
@@ -545,6 +574,71 @@ footer { margin-top: 48px; font-family: var(--mono); font-size: 11px; color: var
           </div>
         </article>
 
+        <!-- Math Arcade -->
+        <article class="tile" data-cat="math" data-keys="math arcade grade 6 7 8 algebra geometry algebra ii precalculus calculus statistics college fractions equations graphs cards quiz vs arena multiplayer">
+          <a class="thumb" href="https://apulido305.github.io/math-arcade/" aria-label="Launch Math Arcade">
+            <div class="thumb-art art-math" aria-hidden="true">
+              <svg viewBox="0 0 200 120"><path d="M0 60h200M100 0v120" stroke="#5a64a8" stroke-width="1.5"/><path d="M30 6Q100 170 170 6" fill="none" stroke="#ff6b9d" stroke-width="4" stroke-linecap="round"/><circle cx="100" cy="88" r="5" fill="#f3dd7a"/></svg>
+              <span class="eq">y = x²</span>
+            </div>
+            <span class="tag-level" style="background:#ff6b9d;color:#2a0716">Card Battler</span>
+            <span class="tag-time">SOLO + VS ARENA</span>
+            <span class="launch"><span class="btn"><span class="icon">play_arrow</span>Launch</span></span>
+          </a>
+          <div class="meta">
+            <div class="avatar" style="background:#ffe3ee;color:#831843"><span class="icon">functions</span></div>
+            <div class="meta-body">
+              <h3><a href="https://apulido305.github.io/math-arcade/">Math Arcade</a></h3>
+              <div class="byline">Mr. Pulido · Math <span class="icon fill">check_circle</span></div>
+              <p class="desc">Grade 6 to College math card quiz. Pick your level, solve fresh problems, hunt for errors and match graphs, then battle classmates live in VS Arena.</p>
+              <div class="chips"><span class="chip pink">Grades 6–College</span><span class="chip">160 Cards</span><span class="chip violet">Multiplayer</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Physics Arcade -->
+        <article class="tile" data-cat="science" data-keys="physics arcade science motion forces newton energy heat waves sound light electricity magnetism circuits atomic nuclear formulas equations units problems ignitia cards quiz vs arena multiplayer">
+          <a class="thumb" href="https://apulido305.github.io/physics-arcade/" aria-label="Launch Physics Arcade">
+            <div class="thumb-art art-phys" aria-hidden="true">
+              <span class="wave"></span>
+              <div class="atom"><i style="--r:0deg"></i><i style="--r:60deg"></i><i style="--r:120deg"></i><b></b></div>
+            </div>
+            <span class="tag-level" style="background:#00f0ff;color:#04262b">Card Battler</span>
+            <span class="tag-time">SOLO + VS ARENA</span>
+            <span class="launch"><span class="btn"><span class="icon">play_arrow</span>Launch</span></span>
+          </a>
+          <div class="meta">
+            <div class="avatar" style="background:#cffafe;color:#164e63"><span class="icon">bolt</span></div>
+            <div class="meta-body">
+              <h3><a href="https://apulido305.github.io/physics-arcade/">Physics Arcade</a></h3>
+              <div class="byline">Mr. Pulido · Physics <span class="icon fill">check_circle</span></div>
+              <p class="desc">Physics 1 card quiz (Ignitia Physics). Name the law, pick the equation, predict what changes, and solve fresh problems at three levels, then battle classmates live in VS Arena.</p>
+              <div class="chips"><span class="chip cyan">Formulas</span><span class="chip">208 Cards</span><span class="chip violet">Multiplayer</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- History Arcade -->
+        <article class="tile" data-cat="history" data-keys="history arcade u.s. us american world history social studies colonies revolution civil war ancient medieval renaissance empires industrial revolution world wars cold war dates timeline eras ignitia cards quiz vs arena multiplayer">
+          <a class="thumb" href="https://apulido305.github.io/history-arcade/" aria-label="Launch History Arcade">
+            <div class="thumb-art art-hist" aria-hidden="true">
+              <div class="rose"><i style="--r:0deg"></i><i style="--r:90deg"></i><i style="--r:45deg"></i><i style="--r:135deg"></i><b></b></div>
+            </div>
+            <span class="tag-level" style="background:#c9a978;color:#2a1f0e">Card Battler</span>
+            <span class="tag-time">SOLO + VS ARENA</span>
+            <span class="launch"><span class="btn"><span class="icon">play_arrow</span>Launch</span></span>
+          </a>
+          <div class="meta">
+            <div class="avatar" style="background:#f3e8d2;color:#5b4321"><span class="icon">history_edu</span></div>
+            <div class="meta-body">
+              <h3><a href="https://apulido305.github.io/history-arcade/">History Arcade</a></h3>
+              <div class="byline">Mr. Pulido · History <span class="icon fill">check_circle</span></div>
+              <p class="desc">U.S. and World History card quiz (Ignitia). Who did it, when it happened, which came first and in what order, from ancient empires to the Cold War, then battle classmates live in VS Arena.</p>
+              <div class="chips"><span class="chip tan">U.S. + World</span><span class="chip">213 Cards</span><span class="chip violet">Multiplayer</span></div>
+            </div>
+          </div>
+        </article>
+
         <!-- Multiplication -->
         <article class="tile" data-cat="math" data-keys="multiplication times tables math flashcards 1-12 facts">
           <a class="thumb" href="https://apulido305.github.io/multiplication/" aria-label="Launch Multiplication Practice">
@@ -623,6 +717,9 @@ footer { margin-top: 48px; font-family: var(--mono); font-size: 11px; color: var
     code: { name: "Code Arcade", url: "https://apulido305.github.io/code-arcade/", cat: "cs" },
     bible: { name: "Scripture Arcade", url: "https://apulido305.github.io/bible-arcade/", cat: "bible" },
     spelling: { name: "Spelling Flashcards", url: "https://apulido305.github.io/spelling/", cat: "spelling" },
+    math: { name: "Math Arcade", url: "https://apulido305.github.io/math-arcade/", cat: "math" },
+    physics: { name: "Physics Arcade", url: "https://apulido305.github.io/physics-arcade/", cat: "science" },
+    history: { name: "History Arcade", url: "https://apulido305.github.io/history-arcade/", cat: "history" },
     multiplication: { name: "Multiplication Practice", url: "https://apulido305.github.io/multiplication/", cat: "math" }
   };
   var ALIASES = { element: "elemental", elements: "elemental", chem: "elemental", chemistry: "elemental",
@@ -630,7 +727,8 @@ footer { margin-top: 48px; font-family: var(--mono); font-size: 11px; color: var
     earth: "space", earthspace: "space", astronomy: "space", planets: "space", stars: "space",
     python: "code", py: "code", cs: "code", coding: "code", tracy: "code", turtle: "code",
     scripture: "bible", niv: "bible", verse: "bible", verses: "bible",
-    sp: "spelling", spell: "spelling", words: "spelling", math: "multiplication", mult: "multiplication", times: "multiplication" };
+    sp: "spelling", spell: "spelling", words: "spelling", mult: "multiplication", times: "multiplication",
+    algebra: "math", geometry: "math", calculus: "math", calc: "math", precalc: "math", stats: "math" };
 
   var tiles = Array.prototype.slice.call(document.querySelectorAll(".tile"));
   var filterBtns = Array.prototype.slice.call(document.querySelectorAll("[data-filter]"));
@@ -706,7 +804,7 @@ footer { margin-top: 48px; font-family: var(--mono); font-size: 11px; color: var
     switch (verb) {
       case "help":
         line("ls apps          list every app", "info");
-        line("./play <name>    launch an app (elemental, cell, space, code, bible, spelling, multiplication, random)", "info");
+        line("./play <name>    launch an app (elemental, cell, space, code, bible, math, spelling, multiplication, random)", "info");
         line("grep <word>      search the grid", "info");
         line("clear            clear this screen", "info");
         break;
