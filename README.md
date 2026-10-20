@@ -14,6 +14,7 @@ project Pages site on the account: a repo `foo` with Pages turned on is served a
 | Elemental Arcade | https://mrpulido.com/elemental-arcade/ | [elemental-arcade](https://github.com/apulido305/elemental-arcade) |
 | Cell Arcade | https://mrpulido.com/cell-arcade/ | [cell-arcade](https://github.com/apulido305/cell-arcade) |
 | Space Arcade | https://mrpulido.com/earthspace/ | [earthspace](https://github.com/apulido305/earthspace) |
+| Physics Arcade | https://apulido305.github.io/physics-arcade/ | [physics-arcade](https://github.com/apulido305/physics-arcade) |
 | Spelling Flashcards | https://mrpulido.com/spelling/ | [spelling](https://github.com/apulido305/spelling) |
 | Multiplication Practice | https://mrpulido.com/multiplication/ | [multiplication](https://github.com/apulido305/multiplication) |
 

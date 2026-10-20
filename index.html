@@ -217,6 +217,16 @@ main { padding: 72px 32px 64px; }
 .parch .niv { margin-top: 4px; font-size: 10px; letter-spacing: 3px; color: #7a5a2e; }
 .chip.sky { background: #e0f2fe; color: #0c4a6e; }
 
+/* thumbnail art: Physics Arcade */
+.art-phys { background: radial-gradient(circle at 50% 45%, #1d1640 0%, #121626 50%, #0a0c16 100%); display: grid; place-items: center; overflow: hidden; }
+.art-phys .wave { position: absolute; left: 0; right: 0; top: 50%; height: 2px; background: repeating-linear-gradient(90deg, rgba(0,240,255,.0) 0 6px, rgba(0,240,255,.35) 6px 12px); }
+.atom { position: relative; width: 120px; height: 120px; }
+.atom i { position: absolute; inset: 0; border: 2px solid #00f0ff; border-radius: 50%; transform: rotate(var(--r)) scaleY(.36); box-shadow: 0 0 10px rgba(0,240,255,.45); }
+.atom i:nth-child(2) { border-color: #9d4edd; box-shadow: 0 0 10px rgba(157,78,221,.5); }
+.atom i:nth-child(3) { border-color: #ff007f; box-shadow: 0 0 10px rgba(255,0,127,.45); }
+.atom b { position: absolute; left: 50%; top: 50%; width: 16px; height: 16px; margin: -8px; border-radius: 50%; background: #ffb800; box-shadow: 0 0 14px #ffb800; }
+.chip.cyan { background: #cffafe; color: #164e63; }
+
 /* thumbnail art: Spelling */
 .art-spelling { background: radial-gradient(circle at 30% 20%, #4b3a7a 0%, #16121d 72%); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; }
 .letters { display: flex; gap: 6px; transform: translateY(-8px); }
@@ -523,6 +533,28 @@ footer { margin-top: 48px; font-family: var(--mono); font-size: 11px; color: var
           </div>
         </article>
 
+        <!-- Physics Arcade -->
+        <article class="tile" data-cat="science" data-keys="physics arcade science motion forces newton energy heat waves sound light electricity magnetism circuits atomic nuclear formulas equations units problems ignitia cards quiz vs arena multiplayer">
+          <a class="thumb" href="https://apulido305.github.io/physics-arcade/" aria-label="Launch Physics Arcade">
+            <div class="thumb-art art-phys" aria-hidden="true">
+              <span class="wave"></span>
+              <div class="atom"><i style="--r:0deg"></i><i style="--r:60deg"></i><i style="--r:120deg"></i><b></b></div>
+            </div>
+            <span class="tag-level" style="background:#00f0ff;color:#04262b">Card Battler</span>
+            <span class="tag-time">SOLO + VS ARENA</span>
+            <span class="launch"><span class="btn"><span class="icon">play_arrow</span>Launch</span></span>
+          </a>
+          <div class="meta">
+            <div class="avatar" style="background:#cffafe;color:#164e63"><span class="icon">bolt</span></div>
+            <div class="meta-body">
+              <h3><a href="https://apulido305.github.io/physics-arcade/">Physics Arcade</a></h3>
+              <div class="byline">Mr. Pulido · Physics <span class="icon fill">check_circle</span></div>
+              <p class="desc">Physics 1 card quiz (Ignitia Physics). Name the law, pick the equation, predict what changes, and solve fresh problems at three levels, then battle classmates live in VS Arena.</p>
+              <div class="chips"><span class="chip cyan">Formulas</span><span class="chip">208 Cards</span><span class="chip violet">Multiplayer</span></div>
+            </div>
+          </div>
+        </article>
+
         <!-- Spelling -->
         <article class="tile" data-cat="spelling" data-keys="spelling flashcards words ela english reading vocabulary">
           <a class="thumb" href="https://apulido305.github.io/spelling/" aria-label="Launch Spelling Flashcards">
@@ -622,6 +654,7 @@ footer { margin-top: 48px; font-family: var(--mono); font-size: 11px; color: var
     space: { name: "Space Arcade", url: "https://apulido305.github.io/earthspace/", cat: "science" },
     code: { name: "Code Arcade", url: "https://apulido305.github.io/code-arcade/", cat: "cs" },
     bible: { name: "Scripture Arcade", url: "https://apulido305.github.io/bible-arcade/", cat: "bible" },
+    physics: { name: "Physics Arcade", url: "https://apulido305.github.io/physics-arcade/", cat: "science" },
     spelling: { name: "Spelling Flashcards", url: "https://apulido305.github.io/spelling/", cat: "spelling" },
     multiplication: { name: "Multiplication Practice", url: "https://apulido305.github.io/multiplication/", cat: "math" }
   };
