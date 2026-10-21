@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mr. Pulido's App Hub</title>
-<meta name="description" content="Mr. Pulido's study games: Elemental, Cell, Space, Code, Scripture, Math, Physics and History Arcade, Spelling Flashcards and Multiplication Practice.">
+<meta name="description" content="Mr. Pulido's study games: Elemental, Cell, Space, Code, Scripture, Math, Physics, History and Library Arcade, Spelling Flashcards and Multiplication Practice.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%236750a4'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='16' font-weight='700' fill='%23e9ddff' text-anchor='middle'%3E%3E_%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -227,6 +227,15 @@ main { padding: 72px 32px 64px; }
 .atom b { position: absolute; left: 50%; top: 50%; width: 16px; height: 16px; margin: -8px; border-radius: 50%; background: #ffb800; box-shadow: 0 0 14px #ffb800; }
 .chip.cyan { background: #cffafe; color: #164e63; }
 
+/* thumbnail art: Library Arcade */
+.art-ela { background: radial-gradient(circle at 50% 40%, #3f3645 0%, #241d2a 55%, #120b18 100%); display: grid; place-items: center; overflow: hidden; }
+.book { position: relative; width: 120px; height: 84px; display: flex; filter: drop-shadow(0 10px 18px rgba(0,0,0,.5)); }
+.book i { flex: 1; background: linear-gradient(180deg, #ecdef1, #d0c2d4); border: 2px solid #c97bff; }
+.book i:first-child { border-radius: 8px 0 0 8px; transform: skewY(-4deg); }
+.book i:last-child { border-radius: 0 8px 8px 0; transform: skewY(4deg); }
+.book b { position: absolute; left: 50%; top: -6px; bottom: -6px; width: 4px; margin-left: -2px; background: #ebc161; border-radius: 2px; }
+.chip.orchid { background: #f1ddff; color: #540083; }
+
 /* thumbnail art: History Arcade */
 .art-hist { background: radial-gradient(circle at 50% 40%, #3b2f1e 0%, #1c1710 60%, #0e0b07 100%); display: grid; place-items: center; overflow: hidden; }
 .rose { position: relative; width: 112px; height: 112px; border-radius: 50%; border: 2px solid #c9a978; box-shadow: 0 0 0 6px rgba(201,169,120,.12), 0 10px 26px rgba(0,0,0,.5); }
@@ -368,6 +377,7 @@ footer { margin-top: 48px; font-family: var(--mono); font-size: 11px; color: var
       <a href="https://apulido305.github.io/math-arcade/">Math Arcade</a>
       <a href="https://apulido305.github.io/physics-arcade/">Physics Arcade</a>
       <a href="https://apulido305.github.io/history-arcade/">History Arcade</a>
+      <a href="https://apulido305.github.io/library-arcade/">Library Arcade</a>
       <a href="https://apulido305.github.io/multiplication/">Multiplication</a>
     </nav>
   </header>
@@ -639,6 +649,27 @@ footer { margin-top: 48px; font-family: var(--mono); font-size: 11px; color: var
           </div>
         </article>
 
+        <!-- Library Arcade -->
+        <article class="tile" data-cat="spelling" data-keys="library arcade english language arts ela grammar usage vocabulary word parts roots prefixes suffixes academic words literary terms rhetorical devices fix it best standards ignitia cards quiz vs arena multiplayer">
+          <a class="thumb" href="https://apulido305.github.io/library-arcade/" aria-label="Launch Library Arcade">
+            <div class="thumb-art art-ela" aria-hidden="true">
+              <div class="book"><i></i><i></i><b></b></div>
+            </div>
+            <span class="tag-level" style="background:#c97bff;color:#2a0044">Card Battler</span>
+            <span class="tag-time">SOLO + VS ARENA</span>
+            <span class="launch"><span class="btn"><span class="icon">play_arrow</span>Launch</span></span>
+          </a>
+          <div class="meta">
+            <div class="avatar" style="background:#f1ddff;color:#540083"><span class="icon">auto_stories</span></div>
+            <div class="meta-body">
+              <h3><a href="https://apulido305.github.io/library-arcade/">Library Arcade</a></h3>
+              <div class="byline">Mr. Pulido · English <span class="icon fill">check_circle</span></div>
+              <p class="desc">Grades 6 to 12 English card quiz (Ignitia ELA). Name the word part, word, term or rule, fix the sentence, then battle classmates live in VS Arena.</p>
+              <div class="chips"><span class="chip orchid">Grades 6–12</span><span class="chip">280 Cards</span><span class="chip violet">Multiplayer</span></div>
+            </div>
+          </div>
+        </article>
+
         <!-- Multiplication -->
         <article class="tile" data-cat="math" data-keys="multiplication times tables math flashcards 1-12 facts">
           <a class="thumb" href="https://apulido305.github.io/multiplication/" aria-label="Launch Multiplication Practice">
@@ -720,6 +751,7 @@ footer { margin-top: 48px; font-family: var(--mono); font-size: 11px; color: var
     math: { name: "Math Arcade", url: "https://apulido305.github.io/math-arcade/", cat: "math" },
     physics: { name: "Physics Arcade", url: "https://apulido305.github.io/physics-arcade/", cat: "science" },
     history: { name: "History Arcade", url: "https://apulido305.github.io/history-arcade/", cat: "history" },
+    library: { name: "Library Arcade", url: "https://apulido305.github.io/library-arcade/", cat: "spelling" },
     multiplication: { name: "Multiplication Practice", url: "https://apulido305.github.io/multiplication/", cat: "math" }
   };
   var ALIASES = { element: "elemental", elements: "elemental", chem: "elemental", chemistry: "elemental",
@@ -727,7 +759,7 @@ footer { margin-top: 48px; font-family: var(--mono); font-size: 11px; color: var
     earth: "space", earthspace: "space", astronomy: "space", planets: "space", stars: "space",
     python: "code", py: "code", cs: "code", coding: "code", tracy: "code", turtle: "code",
     scripture: "bible", niv: "bible", verse: "bible", verses: "bible",
-    sp: "spelling", spell: "spelling", words: "spelling", mult: "multiplication", times: "multiplication",
+    ela: "library", english: "library", grammar: "library", vocab: "library", sp: "spelling", spell: "spelling", words: "spelling", mult: "multiplication", times: "multiplication",
     algebra: "math", geometry: "math", calculus: "math", calc: "math", precalc: "math", stats: "math" };
 
   var tiles = Array.prototype.slice.call(document.querySelectorAll(".tile"));
