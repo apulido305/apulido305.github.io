@@ -19,6 +19,7 @@ project Pages site on the account: a repo `foo` with Pages turned on is served a
 | History Arcade | https://apulido305.github.io/history-arcade/ | [history-arcade](https://github.com/apulido305/history-arcade) |
 | Spelling Flashcards | https://mrpulido.com/spelling/ | [spelling](https://github.com/apulido305/spelling) |
 | Multiplication Practice | https://mrpulido.com/multiplication/ | [multiplication](https://github.com/apulido305/multiplication) |
+| Tracy Point Finder | https://mrpulido.com/tracy-point-finder/ | [tracy-point-finder](https://github.com/apulido305/tracy-point-finder) |
 
 ## Adding an app
 
