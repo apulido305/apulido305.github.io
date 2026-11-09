@@ -774,7 +774,7 @@ footer { margin-top: 48px; font-family: var(--mono); font-size: 11px; color: var
     cell: { name: "Cell Arcade", url: "https://apulido305.github.io/cell-arcade/", cat: "science" },
     space: { name: "Space Arcade", url: "https://apulido305.github.io/earthspace/", cat: "science" },
     code: { name: "Code Arcade", url: "https://apulido305.github.io/code-arcade/", cat: "cs" },
-    tracy: { name: "Tracy Point Finder", url: "https://apulido305.github.io/tracy-point-finder/", cat: "cs" },
+    tracy: { name: "Tracy Point Finder", url: "https://apulido305.github.io/tracy-point-finder/", cat: "cs", tool: true },
     bible: { name: "Scripture Arcade", url: "https://apulido305.github.io/bible-arcade/", cat: "bible" },
     spelling: { name: "Spelling Flashcards", url: "https://apulido305.github.io/spelling/", cat: "spelling" },
     math: { name: "Math Arcade", url: "https://apulido305.github.io/math-arcade/", cat: "math" },
@@ -875,7 +875,7 @@ footer { margin-top: 48px; font-family: var(--mono); font-size: 11px; color: var
       case "play": case "open": case "run": case "launch": case "cd":
         if (!arg) { line("usage: ./play <name>", "err"); break; }
         if (arg.toLowerCase() === "random") {
-          var keys = Object.keys(APPS);
+          var keys = Object.keys(APPS).filter(function (k) { return !APPS[k].tool; });
           launch(keys[Math.floor(Math.random() * keys.length)]);
           break;
         }
